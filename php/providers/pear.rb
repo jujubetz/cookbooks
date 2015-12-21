@@ -1,9 +1,9 @@
 #
-# Author:: Seth Chisamore <schisamo@getchef.com>
+# Author:: Seth Chisamore <schisamo@chef.io>
 # Cookbook Name:: php
 # Provider:: pear_package
 #
-# Copyright:: 2011, Opscode, Inc <legal@getchef.com>
+# Copyright:: 2011-2015, Chef Software, Inc <legal@chef.io>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -202,7 +202,7 @@ def prefix_channel(channel)
   channel ? "#{channel}/" : ''
 end
 
-def get_extension_dir
+def extension_dir
   @extension_dir ||= begin
                        # Consider using "pecl config-get ext_dir". It is more cross-platform.
                        # p = shell_out("php-config --extension-dir")
@@ -223,7 +223,7 @@ def get_extension_files(name)
 end
 
 def manage_pecl_ini(name, action, directives, zend_extensions)
-  ext_prefix = get_extension_dir
+  ext_prefix = extension_dir
   ext_prefix << ::File::SEPARATOR if ext_prefix[-1].chr != ::File::SEPARATOR
 
   files = get_extension_files(name)
@@ -250,7 +250,7 @@ def manage_pecl_ini(name, action, directives, zend_extensions)
     owner 'root'
     group 'root'
     mode '0644'
-    variables(:name => name, :extensions => extensions, :directives => directives)
+    variables(name: name, extensions: extensions, directives: directives)
     action action
   end
 end

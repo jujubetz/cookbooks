@@ -1,25 +1,27 @@
 php Cookbook
 ============
-
-[![Join the chat at https://gitter.im/opscode-cookbooks/php](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/opscode-cookbooks/php?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](https://travis-ci.org/chef-cookbooks/php.svg?branch=master)](http://travis-ci.org/chef-cookbooks/php)
 [![Cookbook Version](https://img.shields.io/cookbook/v/php.svg)](https://supermarket.chef.io/cookbooks/php)
-[![Build Status](https://travis-ci.org/opscode-cookbooks/php.svg?branch=master)](https://travis-ci.org/opscode-cookbooks/php)
 
-Installs and configures PHP 5.3 and the PEAR package management system.  Also includes LWRPs for managing PEAR (and PECL) packages, PECL channels, and PHP-FPM pools.
+It installs and configures PHP and the PEAR package management system.  Also includes LWRPs for managing PEAR (and PECL) packages, PECL channels, and PHP-FPM pools.
 
 Requirements
 ------------
-### Platforms
+#### Platforms
 - Debian, Ubuntu
-- CentOS, Red Hat, Fedora, Amazon Linux
+- CentOS, Red Hat, Oracle, Scientific, Amazon Linux
+- Fedora
 - Microsoft Windows
 
-### Cookbooks
+#### Chef
+- Chef 11+
+
+#### Cookbooks
 - build-essential
 - xml
 - mysql
-
-These cookbooks are only used when building PHP from source.
+- iis
+- windows
 
 
 Attributes
@@ -236,8 +238,9 @@ end
 
 Usage
 -----
-Simply include the `php` recipe where ever you would like php installed.  To install from source override the `node['php']['install_method']` attribute with in a role:
+Simply include the `php` recipe where ever you would like php installed.  To install from source override the `node['php']['install_method']` attribute with in a role or wrapper cookbook:
 
+####Role example:
 ```ruby
 name "php"
 description "Install php from source"
@@ -258,7 +261,7 @@ This section details "quick development" steps. For a detailed explanation, see 
 
 1. Clone this repository from GitHub:
 
-        $ git clone git@github.com:opscode-cookbooks/php.git
+        $ git clone git@github.com:chef-cookbooks/php.git
 
 2. Create a git branch
 
@@ -285,13 +288,11 @@ This section details "quick development" steps. For a detailed explanation, see 
 
 License & Authors
 -----------------
-- Author:: Seth Chisamore (<schisamo@getchef.com>)
-- Author:: Joshua Timberman (<joshua@getchef.com>)
-- Author:: Julian C. Dunn (<jdunn@getchef.com>)
 
-```text
-Copyright:: 2013-2014, Chef Software, Inc.
+**Author:** Cookbook Engineering Team (<cookbooks@chef.io>)
 
+**Copyright:** 2008-2015, Chef Software, Inc.
+```
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
