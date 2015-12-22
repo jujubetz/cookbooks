@@ -1,6 +1,5 @@
 mysql Cookbook CHANGELOG
 ========================
-This file is used to list changes made in each version of the mysql cookbook.
 
 v6.1.2 (2015-10-05)
 --------------------
