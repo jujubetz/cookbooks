@@ -8,5 +8,5 @@
 default[:composer][:install_globally] = true
 default[:composer][:prefix] = "/usr/local/bin"
 default[:composer][:url] = "https://getcomposer.org/installer"
-default[:composer][:install_dir] = /usr/local/bin
+default[:composer][:install_dir] = nil
 default[:composer][:github_oauth] = nil
