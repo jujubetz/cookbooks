@@ -14,9 +14,9 @@ node[:deploy].each do |application, deploy|
   end
 
   opsworks_deploy_dir do
-    user deploy[:ec2-user]
-    group deploy[:ec2-user]
-    path deploy[:/home/ec2-user/oozo]
+    user deploy[:user]
+    group deploy[:group]
+    path deploy[:deploy_to]
   end
 
   opsworks_deploy do
