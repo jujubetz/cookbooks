@@ -14,9 +14,9 @@ node[:deploy].each do |application, deploy|
   end
 
   opsworks_deploy_dir do
-    user deploy[:user]
-    group deploy[:group]
-    path deploy[:deploy_to]
+    user deploy[:root]
+    group deploy[:root]
+    path deploy[:/var/www]
   end
 
   opsworks_deploy do
