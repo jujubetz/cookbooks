@@ -1,4 +1,4 @@
-name        "php"
+name        "install all dependencies"
 description "Installs PHP"
 maintainer  "AJuliano Piassa"
 license     "Apache 2.0"
