@@ -5,7 +5,7 @@
 # Copyright 2012-2014, Escape Studios
 #
 
-include_recipe node['composer']['php_recipe']
+include_recipe node['composer']
 
 if node['platform'] == 'windows'
   windows_package 'Composer - PHP Dependency Manager' do
