@@ -1,4 +1,3 @@
-# install the mongodb pecl
-php_pear "mongo" do
+php_pear 'mongodb' do
   action :install
 end

@@ -9,7 +9,7 @@ issues_url        'https://github.com/chef-cookbooks/php/issues' if respond_to?(
 
 depends 'build-essential'
 depends 'xml'
-depends 'mysql', '>= 6.0.0'
+depends 'mysql', '~> 6.0'
 depends 'yum-epel'
 depends 'windows'
 depends 'iis'
