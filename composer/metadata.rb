@@ -10,8 +10,6 @@ version '2.2.1'
   supports os
 end
 
-depends 'php'
-
 recommends 'windows'
 
 recipe 'composer', 'Installs (if applicable) and self-updates composer.'
