@@ -1,4 +1,4 @@
-#
+2#
 # Cookbook Name:: composer
 # Recipe:: global_configs
 #
