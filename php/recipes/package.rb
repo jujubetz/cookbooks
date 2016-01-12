@@ -57,7 +57,7 @@ if platform?('windows')
 else
   node['php']['packages'].each do |pkg|
     package pkg do
-      action :upgrade
+      action :install
       options node['php']['package_options']
     end
   end
