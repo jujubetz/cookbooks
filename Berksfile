@@ -10,5 +10,7 @@ cookbook 'php', '~> 1.7.2'
 # cookbook 'composer', '~> 2.2.0'
 
 # python
-
 cookbook 'python', '~> 1.4.3'
+
+# newrelic
+cookbook 'newrelic', '~> 2.17.0'
