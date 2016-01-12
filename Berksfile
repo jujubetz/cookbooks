@@ -12,5 +12,8 @@ cookbook 'php', '~> 1.7.2'
 # python
 cookbook 'python', '~> 1.4.3'
 
+# supervisor
+cookbook 'supervisor', '~> 0.4.12'
+
 # newrelic
 cookbook 'newrelic', '~> 2.17.0'
