@@ -11,7 +11,6 @@ version '2.2.0'
 end
 
 depends 'php'
-depends 'dependencias'
 
 recommends 'windows'
 
