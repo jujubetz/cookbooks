@@ -1,15 +1,14 @@
-# cookbooks
-Custom Cookbook Git for OOZOtv PHP app
+Cookbook for 00z0tv implementation by Juliano Piassa
 
-.
+This cookbooks cover:
 
-- Build-Essential
-- Yum-epel
-- NewRelic
-- PHP
-- Chef-Sugar
-- XML
-- YUM
+1. Creation of PHP env with all dependencies, apps and deploy
+
+Using chef 11.10 with berkshelf 
+
+Dependencies at berksfile pointing to chef comunity
+
+
 
 
 
