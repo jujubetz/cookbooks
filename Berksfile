@@ -17,3 +17,12 @@ cookbook 'supervisor', '~> 0.4.12'
 
 # newrelic
 # cookbook 'newrelic', '~> 2.17.0'
+
+# curl
+cookbook 'curl', '~> 2.0.1'
+
+# apt
+cookbook 'apt', '~> 2.9.2'
+
+# yum
+cookbook 'yum', '~> 3.8.2'
