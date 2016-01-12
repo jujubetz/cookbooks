@@ -1,0 +1,42 @@
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: centos-5.11
+  - name: centos-6.7
+  - name: centos-7.1
+  - name: debian-7.8
+    run_list: apt::default
+  - name: debian-8.1
+    run_list: apt::default
+  - name: fedora-21
+  - name: fedora-22
+  - name: ubuntu-12.04
+    run_list: apt::default
+  - name: ubuntu-14.04
+    run_list: apt::default
+  - name: freebsd-10.1
+    driver:
+      ssh:
+        shell: '"/bin/sh"'
+
+suites:
+  - name: package_install
+    run_list:
+      - recipe[php::default]
+  - name: source_install
+    run_list:
+      - recipe[php::default]
+    attributes: { php: { install_method: "source" } }
+  - name: fpm_test
+    run_list:
+      - recipe[php::default]
+      - recipe[fpm_test]
+    excludes:
+      - centos-5.11
+      - centos-6.7
+      - fedora-21
+      - freebsd-10.1

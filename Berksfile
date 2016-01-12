@@ -4,7 +4,7 @@ source 'https://supermarket.chef.io'
 cookbook 'apache2', '~> 3.1.0'
 
 # php
-cookbook 'php', '~> 1.7.2'
+# cookbook 'php', '~> 1.7.2'
 
 # composer
 # cookbook 'composer', '~> 2.2.0'
