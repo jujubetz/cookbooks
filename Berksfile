@@ -16,4 +16,4 @@ cookbook 'python', '~> 1.4.3'
 cookbook 'supervisor', '~> 0.4.12'
 
 # newrelic
-cookbook 'newrelic', '~> 2.17.0'
+# cookbook 'newrelic', '~> 2.17.0'
