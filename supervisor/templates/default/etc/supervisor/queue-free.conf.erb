@@ -1,9 +1,0 @@
-[program:queue-free]
-process_name=%(program_name)s_%(process_num)02d
-command=php /srv/www/oozotv/current/artisan queue:listen sqs --tries=3 --timeout=90 --queue={high_queue_url},{low_queue_url}
-autostart=true
-autorestart=true
-user=root
-numprocs=1
-redirect_stderr=true
-stdout_logfile=/path/to/project/storage/logs/supervisor.log

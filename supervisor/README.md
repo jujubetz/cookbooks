@@ -1,57 +1,64 @@
-# Description
+[![Build Status](https://travis-ci.org/escapestudios-cookbooks/supervisor.png)](https://travis-ci.org/escapestudios-cookbooks/supervisor)
 
-Chef cookbook for supervisor, a python-based process manager.
+# supervisor cookbook
 
-**NOTE:** Make sure to rename this to `supervisor` if you clone it or 
-incorporate it as a git submodule in your cookbooks.
+## Description
 
-## Recipes
+This cookbook provides an easy way to install Supervisor, a process control system.
 
-### supervisor
+More information?
+http://supervisord.org/index.html
 
-Install and run supervisor. Configuration for processes you want to manage 
-should be placed in separate files under 
-`templates/<default>/etc/supervisor/{name}.conf.erb`. Because these are 
-templates, you can add template variables depending on your setup.
+## Requirements
 
-Template examples included:
+### Cookbooks:
 
-* etherpad-lite
-* pgbouncer
-* rabbitmq
-* redis
+This cookbook doesn't have direct dependencies on other cookbooks.
 
-Add an entry to your chef configuration for all configuration files 
-you want to include and manage with supervisor:
+### Platforms:
 
-    "supervisor": {
-        "includes": ["etherpad-lite", "redis"]
-    }
+* Ubuntu
+* Debian
 
-If you want to use template configuration files defined in a separate 
-cookbook, use the `config_cookbook` option:
+## Attributes
 
-    "supervisor": {
-        "config_cookbook": "custom-cookbook",
-        "includes": ["redis"]
-    }
+* `node['hollandbackup']['programs']` - A list of programs
 
-This expects `cookbooks/custom-cookbook/templates/<default>/supervisor/redis.conf.erb`.
+## Usage
 
-# License and Author
+1. include `recipe[supervisor]` in a run list
+2. include `recipe[supervisor::programs]` to add programs
+3. tweak the attributes via attributes/default.rb
+--- OR ---  
+override the attributes on a higher level (http://wiki.opscode.com/display/chef/Attributes#Attributes-AttributesPrecedence)
 
-Author:: David Marble (<davidmarble@gmail.com>)
+## References
 
-Copyright:: 2012, David Marble
+* [Supervisor home page] (http://supervisord.org/index.html)
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+## License and Authors
 
-    http://www.apache.org/licenses/LICENSE-2.0
+Author: David Joos <david@escapestudios.com>
+Author: Escape Studios Development <dev@escapestudios.com>
+Copyright: 2012-2015, Escape Studios
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+Unless otherwise noted, all files are released under the MIT license,
+possible exceptions will contain licensing information in them.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
