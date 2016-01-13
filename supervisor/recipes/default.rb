@@ -1,6 +1,6 @@
-script "Install supervisor" do
-    interpreter "bash"
-    user "root"
+script 'Install supervisor' do
+    interpreter 'bash'
+    user 'root'
     cwd Chef::Config[:file_cache_path]
     code <<-EOH
     pip install cElementTree supervisor
