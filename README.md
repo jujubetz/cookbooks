@@ -13,6 +13,7 @@ Berkshelf file:
 
 source 'https://supermarket.chef.io'
 
+```javascript
 # apache
 cookbook 'apache2', '~> 3.1.0'
 # php
@@ -31,6 +32,7 @@ cookbook 'curl', '~> 2.0.1'
 cookbook 'apt', '~> 2.9.2'
 # yum
 cookbook 'yum', '~> 3.8.2'
+```
 
 ## Initial OOZO Stack Setup
 
