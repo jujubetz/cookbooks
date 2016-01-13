@@ -1,9 +1,9 @@
 
 # OOZOtv Default Stack COOKBOOK
 
-# Mainteiner: juliano@oozo.tv
+# Maintainer: juliano@oozo.tv
 
-This repository keep Chef Cookbooks for AWS OpsWorks Custom layer created by 'mainteiner'.
+This repository keep Chef Cookbooks for AWS OpsWorks Custom layer created by 'maintainer'.
 
 Support for PHP 5.6 and Apache 2.4 and PHP Application deployment.
 
