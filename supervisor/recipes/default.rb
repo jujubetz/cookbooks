@@ -3,7 +3,7 @@ script "Install supervisor" do
     user "root"
     cwd Chef::Config[:file_cache_path]
     code <<-EOH
-    pip install cElementTree supervisor
+    pip install supervisor
     EOH
     #update-rc.d supervisord defaults
     # not_if "which supervisorctl"
