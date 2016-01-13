@@ -1,7 +1,7 @@
 
 # OOZOtv Default Stack COOKBOOK
 
-# Maintainer: juliano@oozo.tv
+Maintainer: juliano@oozo.tv
 
 This repository keep Chef Cookbooks for AWS OpsWorks Custom layer created by 'maintainer'.
 
@@ -11,9 +11,10 @@ Support for PHP 5.6 and Apache 2.4 and PHP Application deployment.
 
 Berkshelf file:
 
+```javascript
 source 'https://supermarket.chef.io'
 
-```javascript
+
 # apache
 cookbook 'apache2', '~> 3.1.0'
 # php
