@@ -88,7 +88,7 @@ when "amazon", "centos", "debian", "fedora", "redhat", "ubuntu", "raspbian"
   end
 
   service "supervisor" do
-    supports :status => true, :restart => true
+    supports :status => false, :restart => false
     action [:enable, :start]
   end
 when "smartos"
