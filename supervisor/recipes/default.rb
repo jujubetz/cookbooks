@@ -17,8 +17,6 @@
 # limitations under the License.
 #
 
-include_recipe "python"
-
 # foodcritic FC023: we prefer not having the resource on non-smartos
 if platform_family?("smartos")
   package "py27-expat" do
