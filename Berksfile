@@ -16,7 +16,7 @@ cookbook 'python', '~> 1.4.3'
 cookbook 'supervisor', '~> 0.4.12'
 
 # newrelic
-# cookbook 'newrelic', '~> 2.17.0'
+cookbook "newrelic", git: 'git://github.com/escapestudios-cookbooks/newrelic.git', tag: '1.0.6'
 
 # curl
 cookbook 'curl', '~> 2.0.1'
