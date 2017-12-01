@@ -3,7 +3,7 @@
 
 Maintainer: juliano@oozo.tv
 
-This repository keep Chef Cookbooks for AWS OpsWorks Custom layer created by 'maintainer'.
+This repository keep Chef Cookbooks for AWS OpsWorks Custom layer created by 'Juliano Piassa'.
 
 Support for PHP 5.6 and Apache 2.4 and PHP Application deployment.
 
@@ -34,24 +34,6 @@ cookbook 'apt', '~> 2.9.2'
 # yum
 cookbook 'yum', '~> 3.8.2'
 ```
-
-## Initial OOZO Stack Setup
-
-1. Add a new stack
-2. Under Advanced Settings:
-   - Pick chef version `11.10` as the chef version
-   - Use custom cookbook pointing to `https://github.com/jujubetz/cookbooks.git`
-   - Enable "Manage Berkshelf" with `3.2.0` as the version 
-   - Edit "Custom JSON" (refer to [Stack Custom JSON](#stack-custom-json) section)
-3. Add a new `Custom -> Custom` layer.
-  * Name: `PHP56 OOZO App Server`
-  * Short name: `php56oozoapp`
-4. Edit the newly created layer, and add the custom recipes:
-  * Setup: `apache2` `php` `apache2::mod_php5` `composer`
-    * Note: To use https, add the `apache2::mod_ssl` recipe, and add 443 to `apache.listen_ports` in Stack Custom JSON.
-  * Configure: `php::configure`
-  * Deploy: `deploy::php-deploy`
-  * Undeploy: `deploy::php-undeploy`
 
 ## Stack Custom JSON
 
